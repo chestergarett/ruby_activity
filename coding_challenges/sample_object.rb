@@ -11,3 +11,4 @@ end
 
 hero = Hero.new('khufra', 'tyrant\'s revenge')
 hero.log
+
