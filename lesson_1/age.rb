@@ -1,6 +1,6 @@
 
 def get_age(age,number)
-     age.to_f+number.to_f
+  age.to_f+number.to_f
 end
 
 puts "How old are you?"
