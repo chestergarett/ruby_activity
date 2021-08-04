@@ -3,9 +3,9 @@ new_array=[]
 
 
 arr.each do |n|
-    if n%2==0
-        new_array.push(n)
-    end
+  if n%2==0
+    new_array.push(n)
+  end
 end
 
 puts new_array
