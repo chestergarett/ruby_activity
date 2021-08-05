@@ -27,6 +27,7 @@ class User
 
   def change_password(password)
     @password = password
+    puts "Password Changed!"
   end
 
   protected
