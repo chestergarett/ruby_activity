@@ -17,14 +17,6 @@ class User
     @ip_address = ip_address        
   end
 
-  def admin_login
-    login()
-  end
-
-  def buyer_login
-    login()
-  end
-
   def change_password(password)
     @password = password
     puts "Password Changed!"
@@ -39,11 +31,19 @@ end
 
 class Admin < User
   include AdminPermisson
+
+  def admin_login
+    login
+  end
 end
 
 
 class Buyer < User
   include BuyerPermission
+
+  def buyer_login
+    login
+  end
 end
 
 
@@ -52,11 +52,9 @@ end
 my_admin = Admin.new('avionuser', 'password', '127.0.0.1')
 my_admin.admin_login
 my_admin.edit_users_profile
-
 my_admin.change_password('new_password')
 
 buyer = Buyer.new('juan', 'password', '127.0.0.1')
 buyer.buyer_login
 buyer.buy
-
 buyer.change_password('new_password')
