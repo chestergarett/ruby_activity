@@ -18,6 +18,6 @@ chou = Hero.new("Jeet Kune Do", "Shunpo", "Way of the Dragon", "Only Fast")
 chou.view_skills
 
 granger = Hero.new("Death Sonata", "Ronda", "Rhapsody", "Caprice")
-chou.view_skills
+granger.view_skills
 
 
