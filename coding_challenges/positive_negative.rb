@@ -10,7 +10,6 @@ def count_positives_sum_negatives(lst)
       positive = positive +1
       else
       negative = negative + n
-      puts n
       end
   end
   puts [positive,negative]
