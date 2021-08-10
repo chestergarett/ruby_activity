@@ -42,16 +42,13 @@ WHERE ID = (
 );
 
 --STEP 5: count of all students
-select count(*) from students
+SELECT COUNT(*) FROM students;
 
 --STEP 6: select students with location Manila
-select * from students where UPPER(location)='MANILA'
+SELECT * FROM students WHERE UPPER(location)='MANILA';
 
 --STEP 7: displaying average age of all students
-select avg(age) from students
+SELECT AVG(age) FROM students;
 
 --STEP 8: display all students by age desc order
-select * from students order by age desc
-
---check
-select * from students
+SELECT * FROM students ORDER BY age DESC;
