@@ -52,3 +52,48 @@ SELECT AVG(age) FROM students;
 
 --STEP 8: display all students by age desc order
 SELECT * FROM students ORDER BY age DESC;
+
+--STEP 9: create classroom table with id, student_id, section columns
+CREATE TABLE IF NOT EXISTS classroom (
+    id SERIAL PRIMARY KEY
+    ,student_id INTEGER NOT NULL
+    ,section varchar(255) NOT NULL
+);
+
+--STEP 10: insert 10 records in classroom table
+INSERT INTO classroom(
+    student_id
+    ,section
+    )
+VALUES
+    (1, 'A'),
+    (2, 'A'),
+    (3, 'B'),
+    (4, 'C'),
+    (5, 'B'),
+    (6, 'A'),
+    (7, 'C'),
+    (8, 'B'),
+    (9, 'B'),
+    (10, 'C')
+    
+--STEP 11: join students and classroom using left join, right join, inner join, full join
+SELECT * 
+FROM students a
+INNER JOIN classroom b
+on a.id=b.student_id
+
+SELECT * 
+FROM students a
+LEFT JOIN classroom b
+on a.id=b.student_id
+
+SELECT * 
+FROM students a
+RIGHT JOIN classroom b
+on a.id=b.student_id
+
+SELECT * 
+FROM students a
+FULL JOIN classroom b
+on a.id=b.student_id
