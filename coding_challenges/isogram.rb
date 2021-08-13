@@ -1,6 +1,6 @@
 def is_isogram(string)
   #your code here
-  lower_string = string.downcase
+  lower_string = string.downcase.split('')
   letter_split = lower_string.split
   array = []
   if letter_split.length==0
